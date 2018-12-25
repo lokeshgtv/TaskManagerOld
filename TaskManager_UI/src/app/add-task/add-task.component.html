@@ -1,0 +1,38 @@
+  <form [formGroup]="taskForm" (ngSubmit)="AddTask()" class="form-horizontal">  
+        <div class="form-group">
+          <label class="col-sm-2 Bold">Task:</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="Task Description" [formControl]="tName"/>
+          </div>
+          </div>              
+        <div class="form-group">
+            <label class="col-sm-2 Bold">Priority:</label>
+            <div class="col-sm-6">
+              <input type="range" min=1 max=30 value=15 class="form-control" [formControl]="tPriority"/>
+            </div>
+          </div>     
+          <div class="form-group">
+              <label class="col-sm-2 Bold">Parent Task:</label>
+              <div class="col-sm-6">
+                  <input type="text" class="form-control" placeholder="Parent Description" [formControl]="tParentTask.ParentTaskName"/>
+              </div>
+            </div>  
+          <div class="form-group">
+              <label class="col-sm-2 Bold">Start Date:</label>
+              <div class="col-sm-6">
+                  <input type="date" class="form-control" [formControl]="tStartDate"/>
+              </div>
+          </div>  
+          <div class="form-group">
+              <label class="col-sm-2 Bold">End Date:</label>
+              <div class="col-sm-6">
+                  <input type="date" class="form-control" [formControl]="tEndDate"/>
+              </div>
+          </div>
+          <div class="form-group form-inline">
+              <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Add Task" class="form-control" id="tEndDate"/>
+                <input style="margin-left : 20px" type="reset" value="Reset" class="form-control" id="tEndDate"/>   
+            </div>                       
+          </div>
+</form>
